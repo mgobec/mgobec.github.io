@@ -2,6 +2,9 @@
 title:  "Cassandra Tuning - Above and Beyond"
 date:   2016-12-27 11:27:14 +0200
 ---
+
+![an image alt text]({{ site.baseurl }}/images/2000px-cassandra_logosvg.png "Cassandra Tuning - Above and Beyond")
+
 This September I held a presentation on Cassandra Summit 2016 about tuning Apache Cassandra for low latency while deployed on AWS.
 
 This is the abstract of the presentation:

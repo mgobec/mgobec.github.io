@@ -2,7 +2,9 @@
 title:  "Introduction to Apache Kafka"
 date:   2016-03-01 13:02:42 +0200
 ---
-In my previous blog I wrote about distributed systems and why we choose this path with today’s requirements. One of the most important parts of a scalable architecture is a messaging system which is used for communication of application components, log aggregation, event handling, etc. There are some standards that try to describe different protocols but I will focus on the architecture.
+![an image alt text]({{ site.baseurl }}/images/stream720.jpeg "Introduction to Apache Kafka")
+
+In my [previous blog][why-go-distributed] I wrote about distributed systems and why we choose this path with today’s requirements. One of the most important parts of a scalable architecture is a messaging system which is used for communication of application components, log aggregation, event handling, etc. There are some standards that try to describe different protocols but I will focus on the architecture.
 
 Typically, we use publish-subscribe message brokers to handle our message queue and this is a great way to start. The logic behind this is that everything is an event and all the components either produce or consume events. It’s always easy to expand functionality, to add more publishers or subscribers and even base an architecture on events (event-driven architecture). There is a lot of material describing these concepts so I will not get into detail. The problem I'm focusing on is scalability and performance.
 
@@ -29,3 +31,4 @@ Being distributed, Kafka has failover mechanisms where if master node is down, o
 [rabbit-mq-link]: https://www.rabbitmq.com/
 [apache-kafka-link]: http://kafka.apache.org/
 [amqp-standard-link]: https://www.amqp.org/
+[why-go-distributed]: {{ site.baseurl }}{% post_url 2015-06-27-why-go-distributed %}
