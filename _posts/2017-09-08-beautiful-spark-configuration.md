@@ -16,8 +16,8 @@ example {
 
   spark {
     settings {
-      "spark.driver.memory" = "3g"
       "spark.executor.memory" = "8g"
+      "spark.sql.shuffle.partitions" = "600"
       "spark.serializer" = "org.apache.spark.serializer.KryoSerializer"
     }
   }
