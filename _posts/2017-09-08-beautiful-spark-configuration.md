@@ -80,7 +80,7 @@ spark-submit --conf "spark.driver.extraJavaOptions=job.config" --class example.T
 
 The `extraJavaOptions` parameter is what make the Typesafe's config library automatically load the config file. A good practice is to have a default configuration in case the external configuration is not specified but also to provide a reference configuration file structure. This is usually called `application.conf` and is located in the main resources directory of the project. Using this approach, the `application.conf` file also serves to set defaults with the ability to override them with an external configuration. But, be careful, everything specified in the `application.conf` is applied if not overridden with the external configuration file.
 
-I like this approach because the external configuration file provides an extremely easy way to configure Spark job and enables it to run in different environments or even with different data input sources and output targets.
+I like this approach because the external configuration file provides an extremely easy way to configure Spark job and enables it to run in different environments or even with different data input sources and output targets with the same binary.
 
 [rundeck-link]: https://www.rundeck.com/
 [typesafe-config-link]: https://github.com/typesafehub/config
