@@ -4,7 +4,7 @@ date:   2016-06-14 09:15:24 +0200
 ---
 ![an image alt text]({{ site.baseurl }}/images/2000px-cassandra_logosvg.png "What's new in Apache Cassandra 3.0")
 
-In the [part one][part-one] of “What’s new in Cassandra 3.0” I got into details about materialized views and in this part I would like to touch up on storage engine rework, token allocation algorithm and a few features from 2.2 that are really useful.
+In the [part one][part-one]{:target="_blank"} of “What’s new in Cassandra 3.0” I got into details about materialized views and in this part I would like to touch up on storage engine rework, token allocation algorithm and a few features from 2.2 that are really useful.
 
 #### **Storage engine rework**
 
@@ -20,7 +20,7 @@ By persisting the schema internal data is being serialized in a type-aware fashi
 
 During my time with Cassandra, I have observed some reasonable disproportions in data size and minor differences in load between nodes in the cluster. Most of this was due to the way the token was generated and no matter how you changed the topology of the cluster the same problem remained with the same nodes. The new token allocation algorithm makes sure that the new nodes take away responsibility from the nodes that are most heavily utilized.
 
-For example, depending on the cluster size and data access patterns, with initial implementation we noticed that some nodes were being utilized more or less than average in the cluster. Adding more nodes to the cluster never solved this issue because of the initial implementation of allocation algorithm and eventually resulted in over or under utilization. Taking the number of vnodes and replication factor into consideration, this algorithm became even more complex when adding new nodes into the cluster and increasing the number of vnodes. In 3.0 version a new property was added to configuration file that specifies the keyspace for which the new algorithm will find different factors that impact the optimization process. The new nodes will still get new tokens but they will take over some token ranges of the most utilized nodes and even out of the cluster. If you are interested in more technical details you should check out this [JIRA][vnode-allocation-jira] ticket.
+For example, depending on the cluster size and data access patterns, with initial implementation we noticed that some nodes were being utilized more or less than average in the cluster. Adding more nodes to the cluster never solved this issue because of the initial implementation of allocation algorithm and eventually resulted in over or under utilization. Taking the number of vnodes and replication factor into consideration, this algorithm became even more complex when adding new nodes into the cluster and increasing the number of vnodes. In 3.0 version a new property was added to configuration file that specifies the keyspace for which the new algorithm will find different factors that impact the optimization process. The new nodes will still get new tokens but they will take over some token ranges of the most utilized nodes and even out of the cluster. If you are interested in more technical details you should check out this [JIRA][vnode-allocation-jira]{:target="_blank"} ticket.
 
 There were also a few interesting additions in Cassandra version 2.2 which I felt like they should be a part of Cassandra 3.0 but got released earlier because of the storage engine revamp.
 

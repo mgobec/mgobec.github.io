@@ -5,9 +5,9 @@ date:   2017-09-08 08:31:12 +0200
 
 Configuring Apache Spark jobs can be hard especially if you need to re-run the job with different parameters in order to achieve the best possible performance or even solve some of the performance issues. When you put into the mix productionizing Spark job and automating the build, deploy and scheduling process in multiple environments with multiple different configurations for the same Spark job code, it becomes obvious that most of the parameters need to be provided from the outside.
 
-Apache Spark jobs are highly configurable and everything can be set from the command line using the parameters or through the code. Going with the hardcoded configuration is most of the times efficient enough in the early stages of development. Once the code gets more complex and we start deploying it to Spark cluster whether using manual, scripted or scheduled submit (I highly recommend [rundeck][rundeck-link] for automation) it quickly becomes obvious that externalizing the configuration is required. This is how I have approached the problem, and I'm really happy with the result.
+Apache Spark jobs are highly configurable and everything can be set from the command line using the parameters or through the code. Going with the hardcoded configuration is most of the times efficient enough in the early stages of development. Once the code gets more complex and we start deploying it to Spark cluster whether using manual, scripted or scheduled submit (I highly recommend [rundeck][rundeck-link]{:target="_blank"} for automation) it quickly becomes obvious that externalizing the configuration is required. This is how I have approached the problem, and I'm really happy with the result.
 
-First, I decided to rely on [Typesafe's config][typesafe-config-link] library because I really like HOCON (Human-Optimized Config Object Notation) and parsing the configuration file is super easy. This is how my example configuration file looks like
+First, I decided to rely on [Typesafe's config][typesafe-config-link]{:target="_blank"} library because I really like HOCON (Human-Optimized Config Object Notation) and parsing the configuration file is super easy. This is how my example configuration file looks like
 
 {% highlight hocon %}
 example {

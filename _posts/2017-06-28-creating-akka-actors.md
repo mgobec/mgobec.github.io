@@ -4,7 +4,7 @@ date:   2017-06-28 08:31:12 +0200
 ---
 #### **Akka**
 
-[Akka][akka-link] is an awesome modular toolkit that enables us to build (event) message driven applications easily without worrying too much about boilerplate code, remoting, clustering etc. One of the patterns used in Akka is the inheritance structure of actors where each parent actor is responsible for the life cycle of its children. The supervisor strategies can be controlled and configured but let’s concentrate on the creation part.
+[Akka][akka-link]{:target="_blank"} is an awesome modular toolkit that enables us to build (event) message driven applications easily without worrying too much about boilerplate code, remoting, clustering etc. One of the patterns used in Akka is the inheritance structure of actors where each parent actor is responsible for the life cycle of its children. The supervisor strategies can be controlled and configured but let’s concentrate on the creation part.
 
 #### **How to create an actor**
 

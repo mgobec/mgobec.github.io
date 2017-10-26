@@ -17,6 +17,6 @@ Here is a link to the video:
 
 <p><iframe width="560" height="349" src="https://www.youtube.com/embed/bQRjfHwjAL4?feature=oembed" frameborder="0" allowfullscreen=""></iframe></p>
 
-and here are the [SLIDES][cassandra-summit-2016-slides].
+and here are the [SLIDES][cassandra-summit-2016-slides]{:target="_blank"}.
 
 [cassandra-summit-2016-slides]: http://www.slideshare.net/DataStax/cassandra-tuning-above-and-beyond-matija-gobec-smartcat-cassandra-summit-2016
