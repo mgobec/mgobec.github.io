@@ -1,5 +1,5 @@
 ---
-title:  "Beautiful Spark configuration"
+title:  "Easy Spark configuration"
 date:   2017-09-08 08:31:12 +0200
 ---
 
